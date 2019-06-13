@@ -31,3 +31,8 @@ We have two jenkins build jobs which will run customized shell scripts. More on 
 ### Important Steps
 1. To setup github webhook with the payload URL as `http://{YOUR_JENKINS_IRL}:{PORT}/github-webhook/` and make sure we receive a response 200 for the sample request
 2. We need to setup different plugins within jenkins for both AWS and Azure. More on this in the other sections
+3. The jenkins EC2 instance needs to have AWS CLI, Azure CLI installed
+4. The Azure VM needs to have Azure CLI and Java environment setup in order to deploy and run the web application once deployed
+
+### Known issues
+1. Jenkins is not able to pick up environment variables when the job is triggered via SQS. Hence as a result, all the jenkins scripts have hardcoded values in them currently
