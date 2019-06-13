@@ -1,5 +1,5 @@
 #!/bin/bash
-# To check the required plugins for Jenkins, refer JENKINS-README.md file
+# To check the required plugins for Jenkins, refer README.md file
 # Note: The env variables here do not work with jobs triggered through SQS
 # You may need to enter hardcoded values
 
