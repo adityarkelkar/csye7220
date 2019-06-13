@@ -14,6 +14,7 @@
 
 <body>
   <h1>CSYE 7220 Deployed App</h1>
+  <h1>Deployment of software applications</h1>
   <hr>
 
   <div class="form">
