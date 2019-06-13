@@ -12,7 +12,6 @@
   <h1>CSYE 7220 Deployed App</h1>
   <hr>
   <h2>Your name is ${name}</h2>
-  <h3>See told you I will tell you</h3>
 </body>
 
 </html>

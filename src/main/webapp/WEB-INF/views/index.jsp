@@ -14,7 +14,6 @@
 
 <body>
   <h1>CSYE 7220 Deployed App</h1>
-  <h2>I am adding this just to test it out!</h2>
   <hr>
 
   <div class="form">
