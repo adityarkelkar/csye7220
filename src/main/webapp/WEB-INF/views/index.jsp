@@ -15,6 +15,7 @@
   <hr>
 
   <div class="form">
+    <h2>Enter your name and I will tell it to you!</h2>
     <form action="hello" method="post" onsubmit="return validate()">
       <table>
         <tr>
