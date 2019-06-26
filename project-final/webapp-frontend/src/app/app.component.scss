@@ -1,0 +1,11 @@
+.container {
+  border: 1px solid black;
+  width: 70%;
+  margin: 0 auto;
+
+  .form_elems {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+}
