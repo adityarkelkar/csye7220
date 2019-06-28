@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-frontend
+  labels:
+    app: angular-frontend
+    environment: development
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: angular-frontend
+      environment: development
+  template:
+    metadata:
+      labels:
+        app: angular-frontend
+        environment: development
+    spec:
+      containers:
+      - name: angular-frontend-v1-0-container
+        image: adikelkar4/webapp-frontend
+        ports:
+        - containerPort: 4200
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: angular-frontend-service
+  labels:
+    app: angular-frontend
+    version: "1.0"
+    environment: development
+spec:
+  selector:
+    app: angular-frontend
+    environment: development
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 4200

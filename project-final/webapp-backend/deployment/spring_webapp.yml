@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-backend
+  labels:
+    app: webapp-backend
+    environment: development
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp-backend
+      environment: development
+  template:
+    metadata:
+      labels:
+        app: webapp-backend
+        environment: development
+    spec:
+      containers:
+      - name: webapp-backend-v1-0-container
+        image: adikelkar4/webapp-backend
+        env:
+        - name: spring.profiles.active
+          value: "default"
+        - name: DB_URL
+          value: "jdbc:mysql://mysql/lms?allowPublicKeyRetrieval=true&useSSL=false"
+        - name: DB_USERNAME
+          value: "root"
+        - name: DB_PASSWORD
+          value: "password"
+        - name: spring.jpa.properties.hibernate.dialect
+          value: "org.hibernate.dialect.MySQL5InnoDBDialect"
+        ports:
+        - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp-backend-service
+  labels:
+    app: webapp-backend
+    version: "1.0"
+    environment: development
+spec:
+  selector:
+    app: webapp-backend
+    environment: development
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
