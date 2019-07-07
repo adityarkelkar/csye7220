@@ -11,3 +11,8 @@ kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h 
 - Wait for the loadbalancer service to come up and provide a DNS
 
 ***Your REST Api is now ready to accept requests at various endpoints***
+
+
+
+
+while true; do wget -q -O- http://a6e5cb472a02511e9998312b6d03033d-509561129.us-east-1.elb.amazonaws.com/library/books; done
