@@ -1,4 +1,4 @@
-# CSYE 7220 - Deployment of Software Applications
+# Deployment and Operation of Software Applications
 ## Northeastern University (May 2019 - June 2019)
 
 Repository for all development and deployment related to course CSYE 7220
