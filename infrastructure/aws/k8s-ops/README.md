@@ -1,16 +1,14 @@
 # k8s-ops
 
 ## Objective
-- This is a self made project wherein I will attempt to setup a fully functional, highly available kubernetes cluster based off AWS
-- I will make use of the KOPS tool to spin up the cluster along with the kubernetes dashboard for the same
-- I will attempt to manage all the infrastructure using ansible by defining various roles for various purposes
+- Setup a fully functional, highly available k8s cluster based off AWS using Ansible and kops
 
 ## Prerequisites
-1. <a href="https://github.com/kubernetes/kops/blob/master/docs/install.md">**KOPS**</a>
-2. <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html">**AWS CLI**</a>
-3. <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management">**kubectl**</a>
-4. <a href="https://docs.docker.com/install/">**Docker**</a>
-5. <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">**Ansible**</a>
+1. [**KOPS**](https://github.com/kubernetes/kops/blob/master/docs/install.md)
+2. [**AWS CLI**](https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html)
+3. [**kubectl**](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
+4. [**Docker**](https://docs.docker.com/install/)
+5. [**Ansible**](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 *I will be using a Ubuntu 64bit operating system to run all operations. All the instructions hereby will be keeping this same OS in mind*
 
